@@ -12,6 +12,11 @@ pipeline {
                 echo 'Test step'
             }
         }
+        stage('Deploy approval') {
+            steps {
+                input 'Proceed with deployment?'
+            }
+        }
         stage('Deploy') {
             steps {
                 echo 'Deploy step'
