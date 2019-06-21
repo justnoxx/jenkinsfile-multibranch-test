@@ -5,6 +5,7 @@ pipeline {
         stage('Build') { 
             steps { 
                 echo 'build step from Git'
+                sh 'echo 123 > artifact.jar'
             }
         }
         stage('Test'){
