@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                echo 'Another build step from Git'
+                echo 'Long build step from Git'
+                sh 'sleep 30'
             }
         }
         stage('Test'){
