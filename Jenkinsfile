@@ -1,6 +1,9 @@
 pipeline {
     agent any 
 
+    // Pipeline will be executed only if branch matches
+    when { branch 'master' }
+
     stages {
         stage('Build') { 
             steps { 
