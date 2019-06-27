@@ -5,7 +5,7 @@ pipeline {
         stage('Build') { 
             steps { 
                 echo 'build step from Git'
-                sh 'echo 123 > artifact.jar'
+                sh 'echo 123 > spring-petclinic-monitoring-1.5.3.jar'
             }
         }
         stage('Test'){
@@ -22,7 +22,7 @@ pipeline {
 
     post {
       always {
-        archiveArtifacts artifacts: 'artifact.jar'
+        archiveArtifacts artifacts: 'spring-petclinic-monitoring-1.5.3.jar'
       }
     }
 }
