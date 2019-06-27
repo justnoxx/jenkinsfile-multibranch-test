@@ -22,7 +22,7 @@ pipeline {
 
     post {
       always {
-        archiveArtifacts artifacts: 'build/artifact.jar'
+        archiveArtifacts artifacts: 'artifact.jar'
       }
     }
 }
