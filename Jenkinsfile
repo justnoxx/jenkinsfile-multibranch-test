@@ -3,8 +3,9 @@ pipeline {
 
     stages {
         stage('Build') { 
-            steps { 
-                echo 'build step from Git'
+            steps {
+                println "Parameter1 value : ${param1}"
+                println "Parameter2 value : ${param2}"
             }
         }
         stage('Test'){
@@ -21,8 +22,8 @@ pipeline {
 
     properties([
       parameters([
-        string(name: 'param1', defaultValue: ''),
-        string(name: 'param2', defaultValue: '')
+        string(name: 'param1', defaultValue: 'not set'),
+        string(name: 'param2', defaultValue: 'not set')
       ])
     ])
 
