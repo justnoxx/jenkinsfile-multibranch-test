@@ -18,4 +18,12 @@ pipeline {
             }
         }
     }
+
+    properties([
+      parameters([
+        string(name: 'param1', defaultValue: ''),
+        string(name: 'param2', defaultValue: '')
+      ])
+    ])
+
 }
