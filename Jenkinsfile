@@ -1,10 +1,10 @@
 pipeline {
     agent any 
 
-    parameters([
-      string(name: 'param1', defaultValue: 'not set'),
+    parameters {
+      string(name: 'param1', defaultValue: 'not set')
       string(name: 'param2', defaultValue: 'not set')
-    ])
+    }
 
     stages {
         stage('Build') { 
