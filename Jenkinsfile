@@ -1,9 +1,11 @@
+
 pipeline {
     agent any 
 
     stages {
         stage('Build') { 
-            steps { 
+            steps {
+
                 echo 'build step from Git'
                 sh 'echo 123 > spring-petclinic-monitoring-1.5.3.jar'
             }
