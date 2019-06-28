@@ -20,11 +20,13 @@ pipeline {
         }
     }
 
-    options([
+    options {
+
       parameters([
         string(name: 'param1', defaultValue: 'not set'),
         string(name: 'param2', defaultValue: 'not set')
       ])
-    ])
+
+    }
 
 }
