@@ -3,7 +3,8 @@ pipeline {
 
     stages {
         stage('Build') { 
-            steps { 
+            steps {
+
                 echo 'build step from Git'
             }
         }
